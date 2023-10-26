@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfjiguep4n144"]
+
+[ext_resource type="AudioStream" uid="uid://c6wsoqm1ggpqi" path="res://y2mate.com - Animal Crossing New Horizons  Welcome Horizons Title Theme.mp3" id="1_h1bot"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_h1bot")
+autoplay = true

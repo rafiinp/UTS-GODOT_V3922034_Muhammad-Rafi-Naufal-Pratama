@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlnw4cuwfuw15"]
+
+[ext_resource type="Script" path="res://start_menu.gd" id="1_5l81h"]
+[ext_resource type="Texture2D" uid="uid://dvxdqwalelxlt" path="res://WhatsApp Image 2023-10-26 at 22.40.12.jpeg" id="2_k03k4"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 8.0
+offset_right = -14.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5l81h")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 733.0
+offset_top = 267.0
+offset_right = 1240.0
+offset_bottom = 549.0
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 194.0
+offset_right = 912.0
+offset_bottom = 585.0
+
+[node name="WhatsAppImage2023-10-26At22_40_12" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(414.75, 120.75)
+scale = Vector2(0.716563, 0.709444)
+texture = ExtResource("2_k03k4")
+
+[node name="Start" type="Button" parent="VBoxContainer/WhatsAppImage2023-10-26At22_40_12"]
+offset_left = -141.0
+offset_top = 44.0
+offset_right = 112.0
+offset_bottom = 98.0
+text = "Start"
+
+[node name="Quit" type="Button" parent="VBoxContainer/WhatsAppImage2023-10-26At22_40_12"]
+offset_left = -141.0
+offset_top = 130.0
+offset_right = 116.0
+offset_bottom = 187.0
+text = "Quit"
+
+[node name="Option" type="Button" parent="VBoxContainer/WhatsAppImage2023-10-26At22_40_12"]
+offset_left = -138.0
+offset_top = 213.0
+offset_right = 117.0
+offset_bottom = 276.0
+text = "Options"
+
+[connection signal="pressed" from="VBoxContainer/WhatsAppImage2023-10-26At22_40_12/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/WhatsAppImage2023-10-26At22_40_12/Quit" to="." method="_on_quit_pressed"]
